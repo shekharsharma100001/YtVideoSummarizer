@@ -9,8 +9,8 @@ from fpdf import FPDF
 from docx import Document
 
 st.set_page_config(layout="wide")
-GOOGLE_API_KEY = "AIzaSyDMlGWuPeAhmZjmTFXSi_peXU6Fvcd8Aa8"
-genai.configure(GOOGLE_API_KEY)
+key = st.secrets("GOOGLE_API_KEY")
+genai.configure(api_key=key)
 
 # Extracts video id from youtube URL
 def extract_video_id(youtube_url):
