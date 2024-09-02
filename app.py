@@ -7,12 +7,11 @@ import time
 import io
 from fpdf import FPDF
 from docx import Document
-from dotenv import load_dotenv
 
-load_dotenv()  # load all the environment variables
 
 st.set_page_config(layout="wide")
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+GOOGLE_API_KEY = "AIzaSyDMlGWuPeAhmZjmTFXSi_peXU6Fvcd8Aa8"
+genai.configure(api_key=GOOGLE_API_KEY)
 
 
 # Extracts video id from youtube URL
